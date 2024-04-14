@@ -1,6 +1,6 @@
 module "s3" {
   source         = "./modules/s3"
-  s3_bucket_name = "rocketseat-iac"
+  s3_bucket_name = "natanael-iac"
 }
 
 module "cloudfront" {
