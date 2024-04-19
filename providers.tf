@@ -8,17 +8,12 @@ terraform {
 
    backend "s3" {
     bucket  = "natanael-state-bucket-tf"
-    profile = "natanael-profile"
-    region  = "us-west-1"
     key     = "terraform.tfstate"
     encrypt = true
   }
 }
 
-provider "aws" {
-  region  = "us-west-1"
-  profile = "natanael-profile"
-}
+provider "aws" {}
 
 resource "aws_s3_bucket" "terraform_state" {
   bucket = var.state_bucket
